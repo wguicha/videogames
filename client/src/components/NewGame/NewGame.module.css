@@ -1,0 +1,148 @@
+.newGameContainer {
+    align-items: center;
+    background: var(--light-color);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-family: "Montserrat", sans-serif;
+    height: 100%;
+    grid-template-areas: "left right";
+    width: 80vw;
+    min-width: 300px;
+    margin: auto;
+}
+
+.form {
+    position: relative;
+
+}
+
+.leftContainer {
+    background: var(--focus-color);
+    overflow: hidden;
+    padding: 5vw 0 0 0;
+    position: relative;
+    text-align: center;
+    width: 60%;
+    max-width: 300px;
+    min-width: 180px;
+    height: 80vh;
+}
+.titleForm {
+    color: var(--light-color);
+    display: inline-block;
+    font-size: 2.5vw;
+}
+
+.leftContainerImg {
+    position: relative ;
+
+}
+.leftContainerImg:before {
+    opacity: 0.3;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+.leftContainer img {
+    border-radius: 5px;
+    width: 70%;
+}
+
+.rightContainer {
+    position: relative;
+    width: 60%;
+    min-width: 180px;
+    max-width: 300px;
+    height: 80vh;
+}
+
+.inputLabel {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+
+.inputLabelGroup {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.label {
+    font-weight: 600;
+    font-size: 8pt;
+    margin: 5px 5px 0 5px;
+    padding: 3px 3px 0 3px;
+}
+
+.input {
+    font-size: 10px;
+    margin: 5px;
+    padding: 0.4vw 2vw 0.4vw 0.8vw;
+    border-style: none;
+    letter-spacing: 0.1vw;
+    outline: none;
+    border-radius: 25px;
+    background-color: black;
+    color: var(--light-color);
+}
+
+.inputDescription {
+    background-color: black;
+    border-style: none;
+    border-radius: 5px;
+    color: var(--light-color);
+}
+
+.buttonSubmit {
+    font-size: 4vw;
+    width: 100%;
+    padding-top: 2vw;
+    border-style: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    position: relative;
+    justify-content: center;
+    color:var(--hightlight-color) ;
+    background-color:transparent;
+    pointer-events: painted;
+}
+
+.buttonSubmit:hover {
+    color:var(--strong-color);
+}
+
+.labelRating {
+    position: relative;
+    left: -20px;
+}
+
+.inputRating {
+    position: relative;
+    left: -5px;
+
+}
+
+.labelTemp {
+    position: relative;
+    left: -4px;
+}
+
+.error {
+    color: red;
+    font-size: 0.5em;
+    font-weight: 100;
+    /*text-shadow: 0.5px 0.5px 1px red, 0 0 1em white, 0 0 0.2em white;*/
+}
+
+.inputIncorrect {
+    background-color: #e15244;
+}

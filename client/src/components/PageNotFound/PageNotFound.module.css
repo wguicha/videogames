@@ -1,0 +1,34 @@
+.divAbout {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.divTitle {
+    height: 10%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--strong-color);
+}
+
+.divTitle h1 {
+    color: var(--strong-color);
+}
+
+.divImg {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.divImg img {
+    height: 40%;
+    width: 40%;
+}

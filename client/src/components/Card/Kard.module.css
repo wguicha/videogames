@@ -1,0 +1,104 @@
+*{
+    text-decoration: none;
+}
+
+.divCardContainer {
+  margin: 25px 10px 100px 10px;
+
+}
+
+.divContent {
+  margin-top: 8px;
+  color: white;
+
+}
+
+.divContent h1 {
+  font-size: 12pt;
+
+}
+
+.divContent h3 {
+  font-size: 8pt;
+}
+
+.divContent span {
+  font-size: 8pt;
+  color:var(--strong-color);
+}
+
+.divImg {
+  width: 300px;
+  height: 170px;
+  background: none;
+  border: none;
+  border-radius: 5%;
+  position: relative;
+  z-index: 0;
+  transition: 0.3s;
+  cursor: pointer;
+
+}
+.divImg:before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  padding: 10px;
+  border-radius: 5%;
+  background: conic-gradient(
+    #ff53bb,
+    #0000 30deg 120deg,
+    #00f8d3 150deg 180deg,
+    #0000 210deg 300deg,
+    #ff53bb 330deg
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: intersect;
+}
+.divImg:after {
+  content: "";
+  position: absolute;
+  inset: -100px;
+  background:
+    radial-gradient(
+        200px at left 400px top 150px,
+        #ff53bb 100%,
+        #0000
+    ),
+    radial-gradient(
+        200px at right 400px bottom 150px,
+        #00f8d3 100%,
+        #0000
+    );
+    filter: blur(120px);
+  opacity: 0.3;
+}
+
+.divImg:before,
+.divImg:after {
+  transition: 0.5s, 99999s 99999s transform;
+}
+.divImg:hover {
+  box-shadow: 0 0 0 1px #666;
+
+}
+
+.divImg:hover:before,
+.divImg:hover:after {
+  transform: rotateY(36000deg);
+  transition: 0.5s, 600s linear transform;
+}
+.divImg:before {
+  background-color: #222;
+  border: 2px solid #333;
+}
+.divImg img {
+  border-radius: 2%;
+  left: 2px;
+  position: relative;
+  top: 2px;
+  width: 294px;
+  height: 164px;
+  opacity: 0.9;
+}

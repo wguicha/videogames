@@ -1,0 +1,43 @@
+.divNav {
+    position: static;
+    margin-bottom: 0.1vw;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navGroup {
+    height: 3vw;
+    padding: 0 0.82vw 0 0.82vw;
+    margin: .9vw 0;
+
+}
+
+.linkNav {
+    color: var(--strong-color);
+    text-decoration: none;
+    list-style: none;
+    font-size: 1.2vw;
+    font-weight: 600;
+}
+
+.navGroup {
+    color: var(--strong-color);
+    text-decoration: none;
+    list-style: none;
+}
+
+.linkNav:visited {
+    color: var(--light-color);
+}
+
+.linkNav:hover {
+    color: var(--hightlight-color);
+}
+
+.searchBarNavHidden {
+    display: none;
+}

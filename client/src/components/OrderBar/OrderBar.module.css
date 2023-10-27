@@ -1,0 +1,62 @@
+.divWrap {
+    position: relative;
+    color: var(--strong-color);
+    margin-bottom: 0.5vw;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.selectGroup {
+    display: flex;
+    padding: 0 2.4vw 0 2.4vw;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.selectGroup p {
+    font-size: 1.2vw;
+    font-weight: 600;
+}
+
+.optionGroupFilter {
+    font-size: 1.2vw;
+    font-weight: 600;
+    padding: 0.4vw 2vw 0.4vw 0.8vw;
+    margin-left: 0.8vw;;
+    border-style: none;
+    letter-spacing: 0.1vw;
+    outline: none;
+    border-radius: 25px;
+    background-color: black;
+    color: var(--light-color);
+}
+
+
+.optionGroupFilter option {
+    font-size: 1.2vw;
+    font-weight: 200;
+    padding: 0.5vw 0;
+}
+
+.buttonSearch {
+    font-size: 1.5vw;
+    font-weight: 600;
+    padding: 0;
+    margin-left: 0.8vw;
+    border-style: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    right: 0vw;
+    color:var(--hightlight-color) ;
+    background-color:transparent;
+    pointer-events: painted;
+}
+
+.buttonSearch:hover {
+    color:var(--focus-color);
+}
