@@ -1,30 +1,69 @@
-.divAbout {
-    position: relative;
-    width: 100%;
-    height: 100%;
+.divContainer2 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.divSpecs {
-    height: 10%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .divImg {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
 }
 
 .divImg img {
-    height: 40%;
-    width: 40%;
+    position:absolute;
+    height: 45vh;
+    width: 45vw;
+    left:0;
+    opacity: 1;
+
+}
+
+.divImgTop {
+    z-index: 2;
+    -webkit-animation: swap-image 8s infinite normal;
+    animation: swap-image 8s cubic-bezier(.26,.5,.5,.73) infinite normal;
+}
+
+@keyframes swap-image {
+    0% {
+        opacity: 1;
+    }
+    10% {
+        opacity: 0.8;
+    }
+    20% {
+        opacity: 0.6;
+    }
+    30% {
+        opacity: 0.4;
+    }
+    40% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 0.2;
+    }
+    70% {
+        opacity: 0.4;
+    }
+    80% {
+        opacity: 0.6;
+    }
+    90% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.divContent{
+    position: relative;
+    left: 46vw;
+    width: 53vw;
+}
+
+.iconStar {
+    color: gold;
 }

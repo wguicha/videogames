@@ -102,3 +102,9 @@
   height: 164px;
   opacity: 0.9;
 }
+
+
+.iconStar span {
+  color: gold;
+  height: 50px;
+}
