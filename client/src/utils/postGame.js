@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const URL = 'http://localhost:3001/'
-//const URL = 'https://pidogs-9fgg.onrender.com/'
+//const URL = 'http://localhost:3001/'
+const URL = 'https://videogames-pi-hqh4.onrender.com'
 
 export const postGame = async (newGame) => {
     try {

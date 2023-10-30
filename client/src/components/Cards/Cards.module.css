@@ -41,7 +41,7 @@
 }
 
 .pageNumLi:hover {
-    color: var(--hightlight-color);
+    color: white;
 }
 
 .pageNumLiSelected {

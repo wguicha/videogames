@@ -1,6 +1,27 @@
-.divContainer2 {
+.header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--light-color);
+    opacity: 90%;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.divContainer {
     display: flex;
     flex-direction: column;
+    background-color: var(--strong-color);
+    color: var(--light-color);
+    height: 100vh;
+}
+
+.divContainer2 {
+
 }
 
 .divImg {
@@ -64,6 +85,15 @@
     width: 53vw;
 }
 
+.properties{
+    color: white;
+}
+
 .iconStar {
     color: gold;
+}
+
+.divDesc {
+    position: relative;
+    top: 26vh;
 }

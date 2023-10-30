@@ -28,7 +28,9 @@ function Detail() {
 
   return (
     <>
-    <Nav searchBarNavHidden='yes'/>
+    <div className={styles.header}>
+      <Nav className={styles.nav} searchBarNavHidden='yes'/>
+    </div>
     <div className={styles.divContainer} key={id}>
       <h1 className={styles.h2Name}>{game.name}</h1>
       <div className={styles.divContainer2}>
@@ -40,23 +42,25 @@ function Detail() {
           <h2 className={styles.h2Name}>{game.id}</h2>
           <div className={styles.divInfo}>
             <h3 className={styles.h3Spec}>
-              <span>Rating:</span>&nbsp;&nbsp;&nbsp;
+              <span className={styles.properties}>Rating:</span>&nbsp;&nbsp;&nbsp;
               <span className={styles.iconStar}>{starsHtml}</span>
               &nbsp;&nbsp;&nbsp;
               {game.rating}
             </h3>
             <h3 className={styles.h3Spec}>
-              <span>Release date:</span>&nbsp;&nbsp;&nbsp;{game.released}
+              <span className={styles.properties}>Release date:</span>&nbsp;&nbsp;&nbsp;{game.released}
             </h3>
             <h3 className={styles.h3Spec}>
-              <span>Platforms:</span>&nbsp;&nbsp;&nbsp;{game.platforms}
+              <span className={styles.properties}>Platforms:</span>&nbsp;&nbsp;&nbsp;{game.platforms}
             </h3>
             <h3 className={styles.h3Spec}>
-              <span>Genres:</span>&nbsp;&nbsp;&nbsp;{game.genres}
+              <span className={styles.properties}>Genres:</span>&nbsp;&nbsp;&nbsp;{game.genres}
             </h3>
           </div>
         </div>
-          <h5>{game.description}</h5>
+      </div>
+      <div className={styles.divDesc}>
+        <h5>{game.description}</h5>
       </div>
     </div>
     </>

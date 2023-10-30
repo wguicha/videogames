@@ -7,7 +7,6 @@ async function postGame (req, res) {
         const { name, description, platforms, image, releaseDate, rating } = req.body;
         //Creamos un arreglo con la propiedad genres
         const genres = req.body.genres.split(', ')
-        console.log("body: ", req.body)
         //creamos el registo en la tabla Videogames
         const newGame = await Videogame.create({
             name, description, platforms, image, releaseDate, rating
@@ -30,14 +29,12 @@ async function postGame (req, res) {
                     name : element
                 })
                 newGame.addGenre(newGenre)
-                console.log("paso 2")
             }
         }
 
         res.status(201).json("Record Created");
 
     } catch (err) {
-        console.log(err.message)
         return res.status(500).json({message: err.message})
 
     }

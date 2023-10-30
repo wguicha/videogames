@@ -1,0 +1,9 @@
+Cambiar
+
+api:
+* app.js linea 18 - 19
+* db.js linea 10 - 11
+
+client:
+* postDog.js  linea 3 - 4
+* actions.js linea 4 - 5 

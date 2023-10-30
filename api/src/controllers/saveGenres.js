@@ -11,8 +11,6 @@ async function saveGenres (req, res) {
         let genresArray = []
         let genresArrayUnique = []
 
-        //console.log("Response: ", response.data.results)
-
         response.data.results.forEach((genre) => {
             genresArray = [...genresArray, genre.name];
         });
