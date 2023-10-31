@@ -7,12 +7,15 @@ import { useParams } from "react-router-dom";
 import { generateStars } from "../../utils/generateStars";
 import parseHTML from 'html-react-parser';
 
+//const URL = 'http://localhost:3001/'
+const URL = 'https://videogames-pi-hqh4.onrender.com/'
+
 function Detail() {
   const { id } = useParams();
   const [game, setGame] = useState({});
 
   useEffect(() => {
-      axios(`http://localhost:3001/videogames/${id}`).then(({ data }) => {
+      axios(`${URL}videogames/${id}`).then(({ data }) => {
           if (data.name) {
             setGame({...data, description: parseHTML(data.description)});
           } else {

@@ -6,4 +6,5 @@ api:
 
 client:
 * postDog.js  linea 3 - 4
-* actions.js linea 4 - 5 
+* actions.js linea 4 - 5
+* detail.js linea 10 - 11
