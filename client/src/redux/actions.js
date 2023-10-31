@@ -1,8 +1,8 @@
 import { FETCH_GAMES, UPDATE_PAGES, UPLOAD_GENRES, ADD_GAME, SEARCH_GAMES, FILTER_BY_GENRE, SHOW_ALL, UPDATE_ORDER_PARAMS, JUMP_PAGE, UPDATE_SEARCH_KEY, UPDATE_GENRE_SELECTED } from './action_types'
 import axios from 'axios';
 
-//const URL = 'http://localhost:3001/'
-const URL = 'https://videogames-pi-hqh4.onrender.com/'
+const URL = 'http://localhost:3001/'
+//const URL = 'https://videogames-pi-hqh4.onrender.com/'
 
 export const fetchGames = (payload) => {
     return async (dispatch) => {

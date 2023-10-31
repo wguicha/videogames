@@ -13,9 +13,9 @@ function Card(props) {
 
    return (
 
-         <div className={styles.divCardContainer}>
+         <div className={styles.divCardContainer} key={id}>
             <Link to={`/detail/${id}`} >
-            <div className={styles.divCard} key={id}>
+            <div className={styles.divCard}>
                <div className={styles.divImg}>
                   <img src={image? image: myPhoto404} alt={name + '-image'} />
                   <div className={styles.divContent}>

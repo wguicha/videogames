@@ -74,6 +74,8 @@ export default function NewGame() {
     setNewGame(emptyGame);
   };
 
+  console.log("Errors:", errors)
+
   return (
     <>
     <div className={styles.header}>
@@ -148,30 +150,30 @@ export default function NewGame() {
                   </label>
                   <input
                     type="date"
-                    className={`${styles.input} ${errors.platforms?.length !== 0
+                    className={`${styles.input} ${errors.releaseDate?.length !== 0
                               ?styles.inputIncorrect
                               :styles.inputCorrect}`}
                     name="releaseDate"
                     value={newGame.releaseDate}
                     onChange={handleChange}
                   ></input>
-            </div>
-            {errors.rating
-                  ?errors.rating.map((error) => {return <p className={styles.error}>{error}</p>})
-                  :<></>}
+                  </div>
             <div className={styles.inputLabelGroup}>
-                  <label className={`${styles.label} ${styles.labelRating}`} htmlFor="rating">
-                      Cual es tu calificación:
-                  </label>
-                  <input
-                    type="text"
-                    className={`${styles.input} ${styles.inputRating} ${errors.releaseDate?.length !== 0
-                                      ?styles.inputIncorrect
-                                      :styles.inputCorrect}`}
-                    name="rating"
-                    value={newGame.rating}
-                    onChange={handleChange}
-                  ></input>
+                <label className={`${styles.label} ${styles.labelRating}`} htmlFor="rating">
+                    Cual es tu calificación:
+                </label>
+                <input
+                  type="text"
+                  className={`${styles.input} ${styles.inputRating} ${errors.rating?.length !== 0
+                    ?styles.inputIncorrect
+                    :styles.inputCorrect}`}
+                  name="rating"
+                  value={newGame.rating}
+                  onChange={handleChange}
+                ></input>
+                {errors.releaseDate
+                      ?errors.releaseDate.map((error) => {return <p className={styles.error}>{error}</p>})
+                      :<></>}
             </div>
             <div className={styles.inputLabelGroup}>
                   <label className={styles.label} htmlFor="selectedGenre">

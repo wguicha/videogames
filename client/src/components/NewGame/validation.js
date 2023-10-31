@@ -18,9 +18,6 @@ const validate = (newGame, errors, setErrors) => {
     if(!newGame.description) {
         errorsDescription.push('Debe incluir una descripción')
     }
-    if(newGame.releaseDate > newGame.maxWeigth) {
-        errorsReleaseDate.push('El minimo peso debe ser menor al maxima peso')
-    }
     if(!(newGame.rating > 0) || !(newGame.rating <= 5)) {
         errorsRating.push('Tu calificacion debe estar entre 0 y 5')
     }
