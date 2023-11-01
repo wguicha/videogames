@@ -43,7 +43,7 @@ async function getGames (req, res) {
                 rating: game.rating,
                 releaseDate: game.releaseDate,
                 genres: game.genres,
-                origin: "bd",
+                origin: "db",
             }
             )
             gamesCount = games.length;

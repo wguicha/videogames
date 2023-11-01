@@ -4,15 +4,13 @@ import myPhoto404 from '../../assets/404NotFoundimg.png'
 import { generateStars } from "../../utils/generateStars";
 
 function Card(props) {
-   const { id, name, image, releaseDate, rating } = props.game;
+   const { id, name, image, rating } = props.game;
 
    const genres = props.game.genres?.map(genre => genre.name).join(', ');
-   const platforms = props.game.platforms && props.game.platforms.map(platform => platform.platform.name).join(', ');
 
-   const starsHtml = generateStars(rating);
+   const starsHtml = generateStars(rating, id);
 
    return (
-
          <div className={styles.divCardContainer} key={id}>
             <Link to={`/detail/${id}`} >
             <div className={styles.divCard}>

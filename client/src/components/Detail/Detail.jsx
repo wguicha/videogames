@@ -7,8 +7,8 @@ import { useParams } from "react-router-dom";
 import { generateStars } from "../../utils/generateStars";
 import parseHTML from 'html-react-parser';
 
-const URL = 'http://localhost:3001/'
-//const URL = 'https://videogames-pi-hqh4.onrender.com/'
+//const URL = 'http://localhost:3001/'
+const URL = 'https://videogames-pi-hqh4.onrender.com/'
 
 function Detail() {
   const { id } = useParams();
@@ -25,9 +25,7 @@ function Detail() {
     return setGame({});
   }, [id]);
 
-  const starsHtml = generateStars(game.rating);
-
-  console.log("starsHtml: ", starsHtml);
+  const starsHtml = generateStars(game.rating, id);
 
   return (
     <>

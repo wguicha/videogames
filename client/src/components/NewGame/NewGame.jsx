@@ -74,8 +74,6 @@ export default function NewGame() {
     setNewGame(emptyGame);
   };
 
-  console.log("Errors:", errors)
-
   return (
     <>
     <div className={styles.header}>
@@ -135,14 +133,16 @@ export default function NewGame() {
                   <textarea
                     rows="4"
                     cols="50"
-                    className={`${styles.inputDescription}`}
+                    className={`${styles.inputDescription} ${errors.description?.length !== 0
+                              ?styles.inputIncorrect
+                              :styles.inputCorrect}`}
                     name="description"
                     value={newGame.description}
                     onChange={handleChange}
                   ></textarea>
             </div>
-            {errors.releaseDate
-                  ?errors.releaseDate.map((error) => {return <p className={styles.error}>{error}</p>})
+            {errors.description
+                  ?errors.description.map((error) => {return <p className={styles.error}>{error}</p>})
                   :<></>}
             <div className={styles.inputLabelGroup}>
                   <label className={styles.label} htmlFor="releaseDate">
